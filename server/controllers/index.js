@@ -198,7 +198,7 @@ const updateLast = (req, res) => {
   const savePromise2 = lastAdded2.save();
 
   savePromise.then(() => res.json({ name: lastAdded.name, beds: lastAdded.bedsOwned }));
-  savePromise2.then(() => res.json({ name: lastAdded2.name, breed: lastAdded2.breed, age: lastAdded2.age }));
+  savePromise2.then(() => res.json({ name: lastAdded2.name, age: lastAdded2.age }));
 
   savePromise.catch((err) => res.status(500).json({ err }));
   savePromise2.catch((err) => res.status(500).json({ err }));
